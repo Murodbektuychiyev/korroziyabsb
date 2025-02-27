@@ -1,0 +1,241 @@
+/* 📌 Umumiy stillar */
+body {
+    font-family: Tahoma, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* 📌 Sarlavhalar */
+h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffcc00;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 100px; /* Dark mode tugmasi bilan oraliq qo‘shildi */
+}
+
+h2 {
+    font-size: 28px;
+    margin-top: 30px;
+    color: #ff6600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+    font-size: 22px;
+    color: #00e6e6;
+}
+
+/* 📌 Matnlar */
+p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 80%;
+    margin: 10px auto;
+}
+
+/* 📌 Ro‘yxatlar */
+ul, ol {
+    text-align: left;
+    max-width: 75%;
+    margin: 20px auto;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+li {
+    font-size: 18px;
+    padding: 8px;
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.05);
+    color: #ffcc00;
+}
+
+/* 📌 Chiziqlar */
+hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(to right, #ff6600, #ffcc00);
+    margin: 30px auto;
+    width: 80%;
+}
+
+/* 📌 Kod bloki */
+code {
+    font-family: "Courier New", monospace;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* 📌 Tugmalar */
+button {
+    background: #ff6600;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background: #cc5500;
+    transform: scale(1.1);
+}
+
+/* 📌 Dark Mode tugmasi */
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px; /* Tugmani pastroqqa tushirdik */
+    right: 20px;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+    z-index: 1000; /* Tugmani ustun qilish */
+}
+
+#dark-mode-toggle:hover {
+    background: #0056b3;
+}
+
+/* 📌 Karusel (slayder) */
+#carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.carousel-images {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-images img.active {
+    opacity: 1;
+    position: relative;
+}
+
+/* 📌 Karusel tugmalari */
+#prev-btn, #next-btn {
+    background: #ff6600;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prev-btn { left: -40px; }
+#next-btn { right: -40px; }
+
+#prev-btn:hover, #next-btn:hover {
+    background: #cc5500;
+}
+
+/* 📌 Akkordeon */
+.accordion-btn {
+    background: #ff6600;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    width: 80%;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px auto;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.accordion-btn:hover {
+    background: #cc5500;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0 15px;
+    border-radius: 6px;
+}
+
+.accordion-content.active {
+    max-height: 300px;
+    padding: 10px;
+}
+
+/* 📌 Dark Mode */
+.dark-mode {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    color: #f5f5f5;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+    color: #ffcc00;
+}
+
+.dark-mode button {
+    background: #ffcc00;
+    color: #333;
+}
+
+.dark-mode button:hover {
+    background: #e6b800;
+}
+
+/* 📌 Mobil dizayn */
+@media (max-width: 768px) {
+    h1 { font-size: 28px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 20px; }
+    p { font-size: 16px; }
+    ul, ol { max-width: 90%; }
+    #prev-btn, #next-btn {
+        font-size: 16px;
+        padding: 8px;
+    }
+  }
